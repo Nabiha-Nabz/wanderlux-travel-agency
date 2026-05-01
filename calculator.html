@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WanderLux | Trip Cost Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">WanderLux <span>Travel</span></div>
+      <div class="menu-icon" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Destinations</a></li>
+        <li><a href="calculator.html">Calculator</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container" style="max-width: 700px;">
+      <h2 class="section-title">Plan Your Budget</h2>
+      <form id="costCalculatorForm" style="background: white; padding: 2rem; border-radius: 32px; box-shadow: var(--shadow-sm);">
+        <div class="form-group">
+          <label><i class="fas fa-map-marker-alt"></i> Destination</label>
+          <select id="destination" required>
+            <option value="paris">Paris, France</option>
+            <option value="maldives">Maldives</option>
+            <option value="swiss">Swiss Alps</option>
+            <option value="tokyo">Tokyo, Japan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-users"></i> Number of Travellers</label>
+          <input type="number" id="travellers" min="1" value="2" required>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-calendar-alt"></i> Number of Days</label>
+          <input type="number" id="days" min="1" value="5" required>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-crown"></i> Travel Style</label>
+          <select id="style">
+            <option value="budget">Budget</option>
+            <option value="standard" selected>Standard</option>
+            <option value="luxury">Luxury</option>
+          </select>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">Calculate Cost</button>
+        <div id="estimatedPrice" class="price-result">💎 Estimated Total: -- USD</div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 WanderLux Travel Agency | Luxury Journeys</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
